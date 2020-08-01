@@ -1,0 +1,14 @@
+{
+  "users":[
+  {
+    "user": "swastik",
+    "tags": "admin",
+    "password": "pass"
+  },
+  {
+    "user": "swastik",
+    "tags": "user",
+    "password": "password"
+  }
+]
+}

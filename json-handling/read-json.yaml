@@ -1,0 +1,11 @@
+---
+  - name: Read Users
+    hosts: localhost
+    vars:
+      userList: "{{ lookup('file', 'users.json')}}"
+
+    tasks:
+      - name: List Out vars
+        debug:
+          msg: "{{ item.user }}"
+        with_items: "{{ userList.users }}"
