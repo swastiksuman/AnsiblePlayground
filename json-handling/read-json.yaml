@@ -2,9 +2,12 @@
   - name: Read Users
     hosts: localhost
     vars:
-      userList: "{{ lookup('file', 'users.json')}}"
+      filePath: "/home/swastik/Documents/Workspace/pipeline/AnsiblePlayground/json-handling"
 
     tasks:
+      - name: Get User/pass
+        set_fact:
+          userList: "{{ lookup('file', '{{ filePath }}/users.json')}}"
       - name: List Out vars
         debug:
           msg: "{{ item.user }}"
